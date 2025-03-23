@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Examples of JSP</title>
+<meta charset="UTF-8">
+<title>Servlet Examples</title>
 </head>
 <body>
-<h2>Examples of JSP and JSTL template programming:</h2>
-
-<table>
-<tbody>
-
-<tr><td><a href="TodayPage.jsp">http://localhost:8080/TIW-JSP-JSTL/TodayPage.jsp</a></td><td> Today's date. Basic JSP Template</td></tr>
-<tr><td><a href="PrintUserAgentInstruction.jsp">http://localhost:8080/TIW-JSP-JSTL/PrintUserAgentInstruction.jsp</a></td><td> Prints user agent using instruction syntax</td></tr>
-<tr><td><a href="PrintUserAgentExpression.jsp">http://localhost:8080/TIW-JSP-JSTL/PrintUserAgentExpression.jsp</a></td><td> Prints user agent using expression syntax</td></tr>
-<tr><td><a href="PrintUserAgentScriptlet.jsp">http://localhost:8080/TIW-JSP-JSTL/PrintUserAgentScriptlet.jsp</a></td><td> Prints user agent using scriptlet tag syntax (not commonly used)</td></tr>
-<tr><td><a href="PrintUserAgentEL.jsp">http://localhost:8080/TIW-JSP-JSTL/PrintUserEL.jsp</a></td><td> Prints user agent using Expression Language</td></tr>
-<tr><td><a href="PrintHeaders.jsp">http://localhost:8080/TIW-JSP-JSTL/PrintHeaders.jsp</a></td><td> Printing the request headers</td></tr>
-<tr><td><a href="PrintHeadersTag.jsp">http://localhost:8080/TIW-JSP-JSTL/PrintHeadersTag.jsp</a></td><td> Print headers with scriplet tag (not commonly used)</td></tr>
-<tr><td><a href="http://localhost:8080/prova5_war_exploded/ELExamples.jsp?city=Como"> http://localhost:8080/TIW-JSP-JSTL/ELExamples.jsp?city=Como </a></td><td> Examples of EL expressions with JSP/JSTL objects and scopes</td></tr>
-<tr><td><a href="HelloBeanSimple.jsp">http://localhost:8080/TIW-JSP-JSTL/HelloBeanSimple.jsp</a></td><td> Hello world with use of bean properties</td></tr>
-<tr><td><a href="EmployeeForm.html">http://localhost:8080/TIW-JSP-JSTL/EmployeeForm.html</a></td><td> Use of form bean. Post values stored in a bean</td></tr>
-<tr><td><a href="RequestController?foo=12"> http://localhost:8080/TIW-JSP-JSTL/RequestController?foo=12</a></td><td> Request parameter override: the controller sets the foo parameter to 5</td></tr>
-<tr><td><a href="JSTLConstructs.jsp?role=admin"> http://localhost:8080/TIW-JSP-JSTL/JSTLConstructs.jsp?role=admin</a></td><td> Example of JSTL constructs</td></tr>
-<tr><td><a href="JSTLConstructs.jsp"> http://localhost:8080/TIW-JSP-JSTL/JSTLConstructs.jsp</a></td><td> Example of JSTL constructs, no request parameter</td></tr>
-<tr><td><a href="PersonsController?city=Como"> http://localhost:8080/TIW-JSP-JSTL/PersonsController?city=Como</a></td><td> Query result formatting with JSP looping </td></tr>
-<tr><td><a href="PersonsControllerDAO?city=Como"> http://localhost:8080/TIW-JSP-JSTL/PersonsControllerDAO?city=Como</a></td><td> Query result formatting with DAO and JSP looping </td></tr>
-<tr><td><a href="PersonsControllerJSTL?city=Como"> http://localhost:8080/TIW-JSP-JSTL/PersonsControllerJSTL?city=Como</a></td><td> Query result formatting with JSTL looping </td></tr>
-<tr><td><a href="PersonsControllerDAOJSTL?city=Como"> http://localhost:8080/TIW-JSP-JSTL/PersonsControllerDAOJSTL?city=Como</a></td><td> Query result formatting with DAO and JSTL looping </td></tr>
-<tr><td><a href="http://localhost:8080/prova5_war_exploded/URLEscaping.jsp"> http://localhost:8080/TIW-JSP-JSTL/URLEscaping.jsp</a></td><td> URL escaping</td></tr>
-<tr><td><a href="http://localhost:8080/prova5_war_exploded/InternationalizedSalutation.jsp"> http://localhost:8080/TIW-JSP-JSTL/InternationalizedSalutation.jsp</a></td><td> Internationalization</td></tr>
-</tbody	>
-</table>
-
+	<h3>
+	In these examples we will see how PROCESS and VALIDATE different inputs.
+	</h3>
+	
+	<h4>QUERY STRING</h4>
+	<div>
+		<a href="courses"> List of courses</a>: In this example
+		you will see a list of courses and when selecting one, we will see the details
+	</div>
+	
+	<h4>FORMS</h4>
+	
+	<div>
+		<a href="text_input.html"> Form with text input</a>: In this example
+		you will see how to parse text input
+	</div>
+	<div>
+		<a href="checkbox_input.html"> Form with checkbox input</a>: In this
+		example you will see how to parse checkbox input
+	</div>
+	<div>
+		<a href="radiobutton_input.html"> Form with radio button input</a>: In
+		this example you will see how to parse radio button input
+	</div>
+	<div>
+		<a href="select_input.html"> Form with select</a>: In this example you
+		will see how to parse input in select format by simulating registration to course
+	</div>
+	<div>
+		<a href="upload_form.html"> Upload File</a>: In this example you will
+		see a simple workflow to upload a file
+	</div>
+	
+	<!-- DIFFERENT INPUT TAGS HAVE DIFFERENT VALIDATION OPTIONS, FOR EXAMPLE "REQUIRED"  
+		 https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_required
+		 OR MIN MAX VALUES FOR NUMBERS:
+		 https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_max_min
+		 USE ALL OF THEM WHEN POSSIBLE, EVEN IF ALL CHECKS ARE DONE SERVER SIDE.
+	-->
+	<p> <b>Note 1</b>: in these examples to test the corner cases we did not use the HTML tag "REQUIRED", but it should be added when possible. As well as other tags for validation (e.g. min and max for number input)</p>
+	
+	<p> <b>Note 2</b>: in the examples  to list and add courses, the class CourseManager acts as a "mock-up" of the the database. As you advance in the course you will learn to create classes to write and read from the database and that will be the standard for the course.</p>
 </body>
 </html>
