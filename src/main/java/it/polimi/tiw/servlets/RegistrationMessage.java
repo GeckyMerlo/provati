@@ -16,7 +16,7 @@ public class RegistrationMessage extends HttpServlet {
 	public RegistrationMessage() {
 		super();
 	}
-
+//Comment Trial 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String message = request.getParameter("message");
